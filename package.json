@@ -1,0 +1,32 @@
+{
+  "name": "portfolio_react-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dagonib/Portfolio_React-Bootstrap.git"
+  },
+  "author": "David Gonzalez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dagonib/Portfolio_React-Bootstrap/issues"
+  },
+  "homepage": "https://github.com/dagonib/Portfolio_React-Bootstrap#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
+  }
+}

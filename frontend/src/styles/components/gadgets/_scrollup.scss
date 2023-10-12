@@ -1,0 +1,37 @@
+.scrollup {
+  position: fixed;
+  right: 1.5rem;
+  bottom: -20%;
+  opacity: 0.8;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+
+  &__icon {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+// Show scroll
+.show-scroll {
+  bottom: 1rem;
+}
+
+/*================ BREAKPOINTS ====================*/
+
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .scrollup {
+    right: 1.5rem;
+    padding: 0.25rem 0.4rem;
+
+    &__icon {
+      font-size: 1rem;
+    }
+  }
+}

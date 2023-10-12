@@ -1,0 +1,56 @@
+.modalhook {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 1rem;
+  z-index: 999999;
+
+  &-fade {
+    animation: fade-in 0.5s 1 linear;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  &-body {
+    z-index: 2;
+    position: relative;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100%;
+    width: max-content; // Para que se adapte al contenido.
+  }
+
+  &-header {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+  }
+
+  &-close {
+    font-size: 1.5rem;
+    color: var(--title-color);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    animation-timing-function: cubic-bezier(0.2242, 0.7499, 0.3142, 0.8148);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

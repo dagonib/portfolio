@@ -1,0 +1,236 @@
+.qualification {
+  &__container {
+    display: grid;
+    row-gap: 1.5rem;
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0 0 0 var(--mb-2);
+  }
+
+  &__button {
+    display: flex;
+    column-gap: 0.5rem;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-size);
+    color: var(--title-color);
+    margin: 0 var(--mb-1);
+    width: auto;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &__icon {
+    font-size: 0.8rem;
+    margin-right: 0.05rem;
+  }
+
+  &__active {
+    color: var(--primary-color);
+  }
+
+  &__sections {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+  }
+
+  &__content {
+    display: none;
+    width: 600px;
+
+    &-active {
+      display: block;
+      grid-column: 2/3;
+    }
+  }
+
+  &__data {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+  }
+
+  &__textbox {
+    text-align: right;
+    &--even {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-top: var(--mb-0-25);
+    margin-bottom: var(--mb-0-25);
+    line-height: 1rem;
+
+    a {
+      color: var(--title-color);
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__calendar {
+    display: flex;
+    column-gap: 0.4rem;
+    font-size: var(--small-font-size);
+    align-items: center;
+    justify-content: flex-end;
+
+    &--even {
+      justify-content: flex-start;
+    }
+  }
+
+  &__rounder {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+  }
+
+  &__line {
+    display: block;
+    width: 1px;
+    height: 120%;
+    background-color: var(--text-color);
+    transform: translate(6px, -7px);
+  }
+}
+
+/*================ BREAKPOINTS ====================*/
+
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .qualification {
+    &__container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .qualification {
+    &__content {
+      width: 475px;
+    }
+  }
+}
+
+/* For normal devices */
+@media screen and (max-width: 576px) {
+  .qualification {
+    &__sections {
+      display: flex;
+    }
+
+    &__content {
+      width: fit-content;
+    }
+
+    &__button {
+      font-size: var(--normal-font-size);
+      margin: 0 var(--mb-0-75);
+    }
+
+    &__data {
+      column-gap: 0.5rem;
+    }
+
+    &__title {
+      font-size: var(--small-font-size);
+    }
+
+    &__subtitle {
+      font-size: var(--smaller-font-size);
+      margin-bottom: var(--mb-0-5);
+    }
+
+    &__calendar {
+      font-size: var(--smaller-font-size);
+    }
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .qualification {
+    &__container {
+      row-gap: 0.5rem;
+    }
+
+    &__content {
+      width: 100px;
+    }
+
+    &__button {
+      font-size: var(--small-font-size);
+    }
+
+    &__data {
+      grid-template-columns: 1fr max-content;
+      column-gap: 0.5rem;
+      padding-top: 1rem;
+      justify-items: end;
+    }
+
+    &__textbox {
+      justify-items: end;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      &--even {
+        text-align: right;
+      }
+    }
+
+    &__title {
+      font-size: var(--smaller-font-size);
+    }
+
+    &__subtitle {
+      font-size: var(--smaller-font-size);
+      margin-bottom: var(--mb-0-5);
+    }
+
+    &__calendar {
+      font-size: var(--smaller-font-size);
+    }
+
+    &__icon {
+      font-size: 0.6rem;
+      margin-right: 0;
+    }
+
+    &__set {
+      &--even {
+        grid-column: 2/3;
+        grid-row: 1/-1;
+        transform: translateY(-5px);
+      }
+    }
+
+    &__display {
+      &--none {
+        display: none;
+      }
+    }
+  }
+}

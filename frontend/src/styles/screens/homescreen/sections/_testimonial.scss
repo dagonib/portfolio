@@ -1,0 +1,73 @@
+.testimonial {
+  &__container {
+    display: grid;
+    padding: 0 2rem;
+    max-width: 1140px;
+  }
+
+  &__card {
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+    border-radius: 1.5rem;
+    margin-bottom: var(--mb-3);
+    height: fit-content;
+  }
+
+  &__img {
+    width: 100px;
+    border-radius: 13rem;
+    margin-bottom: var(--mb-1);
+  }
+
+  &__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-25);
+  }
+
+  &__description {
+    font-size: var(--small-font-container);
+  }
+}
+
+/* Swiper Class*/
+.swiper-pagination-bullet {
+  background-color: var(--text-color) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color) !important;
+}
+
+/*================ BREAKPOINTS ====================*/
+
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .testimonial {
+    &__container {
+      width: initial;
+    }
+
+    &__card {
+      padding: 1.25rem 1.5rem;
+    }
+  }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .testimonial {
+  }
+}
+
+/* For normal devices */
+@media screen and (max-width: 576px) {
+  .testimonial {
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .testimonial {
+  }
+}
